@@ -28,6 +28,14 @@
     },
     "experiments": {
       "tsconfigPaths": true
-    }
+    },
+    "plugins": [
+      [
+        "expo-font",
+        {
+          "fonts": ["./public/fonts/SF-Prop-Display-Black.otf"]
+        }
+      ]
+    ]
   }
 }
