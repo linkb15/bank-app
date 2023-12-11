@@ -1,8 +1,7 @@
-import "./global.css";
-
 import { StatusBar } from "expo-status-bar";
 import { Text, View } from "react-native";
-import { Button } from "./ui/button";
+import { Button } from "@/ui/button";
+import { Link } from "expo-router";
 
 export default function App() {
 	return (
@@ -14,6 +13,8 @@ export default function App() {
 				asdfsd
 			</Text>
 			<Button />
+
+			<Link href="/home">About</Link>
 			<StatusBar style="auto" />
 		</View>
 	);
