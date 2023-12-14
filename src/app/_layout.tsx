@@ -12,8 +12,11 @@ SplashScreen.preventAutoHideAsync();
 export default function App() {
 	const [fontsLoaded, fontError] = useFonts({
 		"SF-Pro": require("@/../public/fonts/SF-Pro.ttf"),
+
 		"SF-Pro-Display": require("@/../public/fonts/SF-Pro-Display-Regular.otf"),
+		"SF-Pro-Display-Medium": require("@/../public/fonts/SF-Pro-Display-Medium.otf"),
 		"SF-Pro-Display-Bold": require("@/../public/fonts/SF-Pro-Display-Bold.otf"),
+
 		"SF-Pro-Rounded-Semibold": require("@/../public/fonts/SF-Pro-Rounded-Semibold.otf"),
 	});
 
