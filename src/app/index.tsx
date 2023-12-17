@@ -1,5 +1,5 @@
 import { StatusBar } from "expo-status-bar";
-import { Text, View } from "react-native";
+import { Pressable, Text, View } from "react-native";
 import { Button } from "@/ui/button";
 import { Link } from "expo-router";
 import { B1, B2, H1, H2 } from "@/ui/typography";
@@ -14,42 +14,37 @@ const blurhash =
 export default function App() {
 	return (
 		<View className="flex-1 bg-[#1E2121] items-center justify-center">
-			<View>
-				<Image
-					source="https://picsum.photos/seed/696/3000/2000"
-					placeholder={blurhash}
-					contentFit="cover"
-					transition={1000}
-				/>
-			</View>
-
 			<Logo width={72} height={21} />
-
-			<BlurView
-				style={{
-					height: 308,
-					width: 308,
-					position: "absolute",
-					top: 0,
-					left: 0,
-					overflow: "hidden",
-					borderRadius: 9999,
-					zIndex: -1,
-					// backgroundColor: "hsla(271, 8%, 26%, 0.3)",
-				}}
-				intensity={67}
-				tint="dark"
-			/>
 
 			<View className="h-[308px] w-[308px] rounded-full absolute top-0 left-0 bg-[hsla(271, 8%, 26%, 0.3)]" />
 
-			<Text>Open up App.js to start working on yoasasdfur app!</Text>
-			<Text className="font-sans">
-				asdfsadasdf
-				{"\n"}
-				asdfsd
-			</Text>
-			<Button />
+			<View className="px-6 w-full flex flex-col gap-3">
+				<LinearGradient
+					colors={["#FCFFDF", "#F1FE87"]}
+					className="rounded-full w-full"
+					style={{ borderRadius: 50, width: "100%" }}
+				>
+					<Pressable
+						onPress={() => console.log("running")}
+						className="w-full justify-center flex items-center px-3 py-3"
+					>
+						<Text>Log in</Text>
+					</Pressable>
+				</LinearGradient>
+
+				<LinearGradient
+					colors={["#252525", "#2C2C2C"]}
+					className="rounded-full w-full"
+					style={{ borderRadius: 50, width: "100%" }}
+				>
+					<Pressable
+						onPress={() => console.log("running - 2")}
+						className="w-full justify-center flex items-center px-3 py-3"
+					>
+						<Text className="text-white">Become a client of the bank</Text>
+					</Pressable>
+				</LinearGradient>
+			</View>
 
 			<Text>Heading</Text>
 
